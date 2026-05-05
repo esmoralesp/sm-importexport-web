@@ -4,186 +4,84 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>San Miguel Importación y Exportación</title>
-
-  <!-- Favicon -->
   <link rel="icon" href="logo.png">
 
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #fff;
-    }
-
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #222; background: #fff; }
     header {
-      background: #071426;
-      color: white;
-      padding: 14px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 4px 14px rgba(0,0,0,.25);
+      background: #071426; color: white; padding: 14px 8%; display: flex;
+      justify-content: space-between; align-items: center; position: sticky; top: 0;
+      z-index: 10; box-shadow: 0 4px 14px rgba(0,0,0,.25);
     }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img {
-      height: 70px;
-    }
-
-    .logo-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: #d8a43a;
-    }
-
-    .logo-text span {
-      display: block;
-      font-size: 12px;
-      color: #fff;
-      letter-spacing: 1.5px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .brand img { height: 70px; }
+    .logo-text { font-size: 24px; font-weight: bold; color: #d8a43a; }
+    .logo-text span { display: block; font-size: 12px; color: #fff; letter-spacing: 1.5px; }
+    nav { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; font-weight: bold; font-size: 14px; }
     nav a:hover { color: #d8a43a; }
-
+    .lang-buttons button {
+      background: transparent; color: white; border: 1px solid #d8a43a; padding: 6px 10px;
+      border-radius: 4px; cursor: pointer; font-weight: bold;
+    }
+    .lang-buttons button:hover { background: #d8a43a; color: #071426; }
     .hero {
-      min-height: 550px;
-      background:
-        linear-gradient(rgba(7,20,38,.75), rgba(7,20,38,.75)),
-        url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3") center/cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
+      min-height: 550px; background: linear-gradient(rgba(7,20,38,.75), rgba(7,20,38,.75)),
+      url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3") center/cover;
+      color: white; display: flex; align-items: center; padding: 0 8%;
     }
-
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
-
+    .hero-content { max-width: 780px; }
+    .hero h1 { font-size: 52px; margin-bottom: 15px; line-height: 1.1; }
+    .hero p { font-size: 20px; margin-bottom: 25px; line-height: 1.5; }
     .btn {
-      background: #d8a43a;
-      color: #071426;
-      padding: 14px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+      display: inline-block; background: #d8a43a; color: #071426; padding: 14px 24px;
+      border-radius: 5px; text-decoration: none; font-weight: bold;
     }
-
-    section {
-      padding: 70px 8%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      color: #071426;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
+    .btn:hover { background: #f0c15a; }
+    section { padding: 70px 8%; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 36px; color: #071426; margin-bottom: 10px; }
+    .section-title p { color: #666; max-width: 760px; margin: auto; line-height: 1.6; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+    .about-grid img { width: 100%; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.14); }
+    .about-grid p { line-height: 1.7; color: #555; }
+    .services { background: #f5f5f5; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
     .card {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
-      border-top: 4px solid #d8a43a;
+      background: white; padding: 25px; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,.08);
+      border-top: 4px solid #d8a43a; min-height: 170px;
     }
-
-    .gallery {
-      background: #071426;
-      color: white;
+    .card h3 { color: #071426; margin-top: 0; }
+    .card p { color: #555; line-height: 1.6; }
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+    .step { border: 2px solid #eee; padding: 25px; border-radius: 8px; }
+    .step span {
+      display: inline-block; background: #d8a43a; color: #071426; width: 42px; height: 42px;
+      line-height: 42px; border-radius: 50%; font-weight: bold; margin-bottom: 12px;
     }
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-    }
-
-    .gallery-grid img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 6px;
-    }
-
-    .contact {
-      background: #d8a43a;
-      text-align: center;
-    }
-
+    .gallery { background: #071426; color: white; }
+    .gallery .section-title h2 { color: white; }
+    .gallery .section-title p { color: #ddd; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+    .gallery-grid img { width: 100%; height: 230px; object-fit: cover; border-radius: 6px; }
+    .contact { background: #d8a43a; text-align: center; }
     .contact-box {
-      background: white;
-      max-width: 700px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 8px;
+      background: white; max-width: 720px; margin: auto; padding: 28px; border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.15);
     }
-
-    footer {
-      background: #071426;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
+    footer { background: #071426; color: white; text-align: center; padding: 20px; }
     .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
+      position: fixed; right: 20px; bottom: 20px; background: #25D366; color: white;
+      width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 28px; text-decoration: none; z-index: 20;
+      box-shadow: 0 5px 15px rgba(0,0,0,.3);
     }
-
     @media(max-width: 900px) {
-      .grid, .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        flex-direction: column;
-      }
+      header { flex-direction: column; gap: 14px; }
+      nav { justify-content: center; gap: 12px; }
+      .hero h1 { font-size: 36px; }
+      .grid, .gallery-grid, .about-grid, .steps { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -192,73 +90,279 @@
 
 <header>
   <div class="brand">
-    <img src="logo.png">
+    <img src="logo.png" alt="San Miguel Importación y Exportación">
     <div class="logo-text">
       San Miguel
-      <span>IMPORTACIÓN | EXPORTACIÓN</span>
+      <span id="brand-subtitle">IMPORTACIÓN | EXPORTACIÓN</span>
     </div>
   </div>
 
   <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#inicio" data-i18n="navHome">Inicio</a>
+    <a href="#nosotros" data-i18n="navAbout">Nosotros</a>
+    <a href="#servicios" data-i18n="navServices">Servicios</a>
+    <a href="#proceso" data-i18n="navProcess">Proceso</a>
+    <a href="#galeria" data-i18n="navGallery">Galería</a>
+    <a href="#contacto" data-i18n="navContact">Contacto</a>
+
+    <div class="lang-buttons">
+      <button onclick="setLang('es')">ES</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
   </nav>
 </header>
 
 <section class="hero" id="inicio">
-  <div>
-    <h1>Importación y exportación de repuestos automotrices</h1>
-    <p>Compra en USA y envío seguro a Venezuela</p>
-    <a class="btn" href="#contacto">Cotizar ahora</a>
+  <div class="hero-content">
+    <h1 data-i18n="heroTitle">Importación y exportación de repuestos automotrices</h1>
+    <p data-i18n="heroSubtitle">Compra en USA y envío seguro a Venezuela.</p>
+    <a class="btn" href="#contacto" data-i18n="heroButton">Cotizar ahora</a>
   </div>
 </section>
 
-<section id="servicios">
+<section id="nosotros">
   <div class="section-title">
-    <h2>Servicios</h2>
+    <h2 data-i18n="aboutTitle">Quiénes somos</h2>
+    <p data-i18n="aboutIntro">Soluciones confiables para importar y exportar repuestos automotrices.</p>
+  </div>
+
+  <div class="about-grid">
+    <div>
+      <p data-i18n="aboutP1">
+        En San Miguel Importación y Exportación nos especializamos en la búsqueda,
+        compra y envío de repuestos automotrices hacia Venezuela.
+      </p>
+      <p data-i18n="aboutP2">
+        Nuestro objetivo es entregar una solución segura, rápida y transparente
+        para personas, talleres y empresas que necesitan piezas de calidad desde el exterior.
+      </p>
+      <p data-i18n="aboutP3">
+        Trabajamos bajo pedido, revisando disponibilidad, precio y logística para
+        que cada cliente tenga una experiencia clara desde la cotización hasta la entrega.
+      </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" alt="Vehicle">
+  </div>
+</section>
+
+<section class="services" id="servicios">
+  <div class="section-title">
+    <h2 data-i18n="servicesTitle">Nuestros servicios</h2>
+    <p data-i18n="servicesIntro">
+      Gestionamos repuestos nuevos, usados, partes bajo pedido y soluciones de logística internacional.
+    </p>
   </div>
 
   <div class="grid">
-    <div class="card"><h3>Repuestos</h3><p>Originales y usados</p></div>
-    <div class="card"><h3>Motores</h3><p>Compra y exportación</p></div>
-    <div class="card"><h3>Carrocería</h3><p>Paneles y piezas</p></div>
+    <div class="card">
+      <h3 data-i18n="service1Title">Repuestos automotrices</h3>
+      <p data-i18n="service1Text">Piezas para diferentes marcas y modelos, según disponibilidad y requerimiento del cliente.</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="service2Title">Motores y transmisiones</h3>
+      <p data-i18n="service2Text">Gestión de compra y exportación de motores, cajas y componentes mecánicos.</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="service3Title">Partes de carrocería</h3>
+      <p data-i18n="service3Text">Parachoques, capots, guardafangos, puertas, ópticas y paneles frontales.</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="service4Title">Suspensión y tren delantero</h3>
+      <p data-i18n="service4Text">Componentes de suspensión, dirección, frenos y sistemas relacionados.</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="service5Title">Compra bajo pedido</h3>
+      <p data-i18n="service5Text">Buscamos la pieza que necesitas en proveedores confiables de Estados Unidos.</p>
+    </div>
+    <div class="card">
+      <h3 data-i18n="service6Title">Exportación a Venezuela</h3>
+      <p data-i18n="service6Text">Coordinamos el envío y la logística para que tu repuesto llegue a destino.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="section-title">
+    <h2 data-i18n="processTitle">Cómo trabajamos</h2>
+    <p data-i18n="processIntro">Un proceso simple para cotizar, comprar y enviar tus repuestos.</p>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <span>1</span>
+      <h3 data-i18n="step1Title">Solicitud</h3>
+      <p data-i18n="step1Text">Nos envías repuesto, marca, modelo, año o VIN.</p>
+    </div>
+    <div class="step">
+      <span>2</span>
+      <h3 data-i18n="step2Title">Cotización</h3>
+      <p data-i18n="step2Text">Buscamos opciones y entregamos precio estimado.</p>
+    </div>
+    <div class="step">
+      <span>3</span>
+      <h3 data-i18n="step3Title">Compra</h3>
+      <p data-i18n="step3Text">Confirmamos disponibilidad y gestionamos la compra.</p>
+    </div>
+    <div class="step">
+      <span>4</span>
+      <h3 data-i18n="step4Title">Envío</h3>
+      <p data-i18n="step4Text">Coordinamos logística hasta Venezuela.</p>
+    </div>
   </div>
 </section>
 
 <section class="gallery" id="galeria">
   <div class="section-title">
-    <h2>Galería</h2>
+    <h2 data-i18n="galleryTitle">Galería</h2>
+    <p data-i18n="galleryIntro">Ejemplos de vehículos, piezas y repuestos que podemos gestionar.</p>
   </div>
 
   <div class="gallery-grid">
-    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d">
-    <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98">
-    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d" alt="Car">
+    <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98" alt="Classic car">
+    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3" alt="Auto parts">
   </div>
 </section>
 
 <section class="contact" id="contacto">
-  <h2>Contáctanos</h2>
+  <h2 data-i18n="contactTitle">Contáctanos</h2>
+  <p data-i18n="contactIntro">Envíanos los datos del repuesto que necesitas y te ayudamos a conseguirlo.</p>
 
   <div class="contact-box">
     <p><strong>Email:</strong> contacto@sm-importexport.com</p>
     <p><strong>WhatsApp:</strong> +1 (689) 309-0939</p>
+    <p data-i18n="markets"><strong>Mercados:</strong> USA / Venezuela</p>
 
-    <a class="btn" href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto" target="_blank">
+    <a class="btn" href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto" target="_blank" data-i18n="whatsappButton">
       Escribir por WhatsApp
     </a>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 San Miguel Importación y Exportación</p>
+  <p data-i18n="footerText">© 2026 San Miguel Importación y Exportación. Todos los derechos reservados.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto" target="_blank">
-💬
-</a>
+<a class="whatsapp" href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto" target="_blank">💬</a>
+
+<script>
+  const translations = {
+    es: {
+      navHome: "Inicio",
+      navAbout: "Nosotros",
+      navServices: "Servicios",
+      navProcess: "Proceso",
+      navGallery: "Galería",
+      navContact: "Contacto",
+      heroTitle: "Importación y exportación de repuestos automotrices",
+      heroSubtitle: "Compra en USA y envío seguro a Venezuela.",
+      heroButton: "Cotizar ahora",
+      aboutTitle: "Quiénes somos",
+      aboutIntro: "Soluciones confiables para importar y exportar repuestos automotrices.",
+      aboutP1: "En San Miguel Importación y Exportación nos especializamos en la búsqueda, compra y envío de repuestos automotrices hacia Venezuela.",
+      aboutP2: "Nuestro objetivo es entregar una solución segura, rápida y transparente para personas, talleres y empresas que necesitan piezas de calidad desde el exterior.",
+      aboutP3: "Trabajamos bajo pedido, revisando disponibilidad, precio y logística para que cada cliente tenga una experiencia clara desde la cotización hasta la entrega.",
+      servicesTitle: "Nuestros servicios",
+      servicesIntro: "Gestionamos repuestos nuevos, usados, partes bajo pedido y soluciones de logística internacional.",
+      service1Title: "Repuestos automotrices",
+      service1Text: "Piezas para diferentes marcas y modelos, según disponibilidad y requerimiento del cliente.",
+      service2Title: "Motores y transmisiones",
+      service2Text: "Gestión de compra y exportación de motores, cajas y componentes mecánicos.",
+      service3Title: "Partes de carrocería",
+      service3Text: "Parachoques, capots, guardafangos, puertas, ópticas y paneles frontales.",
+      service4Title: "Suspensión y tren delantero",
+      service4Text: "Componentes de suspensión, dirección, frenos y sistemas relacionados.",
+      service5Title: "Compra bajo pedido",
+      service5Text: "Buscamos la pieza que necesitas en proveedores confiables de Estados Unidos.",
+      service6Title: "Exportación a Venezuela",
+      service6Text: "Coordinamos el envío y la logística para que tu repuesto llegue a destino.",
+      processTitle: "Cómo trabajamos",
+      processIntro: "Un proceso simple para cotizar, comprar y enviar tus repuestos.",
+      step1Title: "Solicitud",
+      step1Text: "Nos envías repuesto, marca, modelo, año o VIN.",
+      step2Title: "Cotización",
+      step2Text: "Buscamos opciones y entregamos precio estimado.",
+      step3Title: "Compra",
+      step3Text: "Confirmamos disponibilidad y gestionamos la compra.",
+      step4Title: "Envío",
+      step4Text: "Coordinamos logística hasta Venezuela.",
+      galleryTitle: "Galería",
+      galleryIntro: "Ejemplos de vehículos, piezas y repuestos que podemos gestionar.",
+      contactTitle: "Contáctanos",
+      contactIntro: "Envíanos los datos del repuesto que necesitas y te ayudamos a conseguirlo.",
+      markets: "Mercados: USA / Venezuela",
+      whatsappButton: "Escribir por WhatsApp",
+      footerText: "© 2026 San Miguel Importación y Exportación. Todos los derechos reservados."
+    },
+    en: {
+      navHome: "Home",
+      navAbout: "About Us",
+      navServices: "Services",
+      navProcess: "Process",
+      navGallery: "Gallery",
+      navContact: "Contact",
+      heroTitle: "Import and export of automotive parts",
+      heroSubtitle: "Buy in the USA and ship safely to Venezuela.",
+      heroButton: "Request a Quote",
+      aboutTitle: "About Us",
+      aboutIntro: "Reliable solutions for importing and exporting automotive parts.",
+      aboutP1: "At San Miguel Import & Export, we specialize in sourcing, purchasing, and shipping automotive parts to Venezuela.",
+      aboutP2: "Our goal is to provide a safe, fast, and transparent solution for individuals, workshops, and companies that need quality parts from abroad.",
+      aboutP3: "We work on request, checking availability, pricing, and logistics so every customer has a clear experience from quotation to delivery.",
+      servicesTitle: "Our Services",
+      servicesIntro: "We manage new parts, used parts, special orders, and international logistics solutions.",
+      service1Title: "Automotive parts",
+      service1Text: "Parts for different brands and models, depending on availability and customer requirements.",
+      service2Title: "Engines and transmissions",
+      service2Text: "Purchase and export management for engines, gearboxes, and mechanical components.",
+      service3Title: "Body parts",
+      service3Text: "Bumpers, hoods, fenders, doors, headlights, and front panels.",
+      service4Title: "Suspension and front end",
+      service4Text: "Suspension, steering, brake components, and related systems.",
+      service5Title: "Special orders",
+      service5Text: "We search for the part you need from reliable suppliers in the United States.",
+      service6Title: "Export to Venezuela",
+      service6Text: "We coordinate shipping and logistics so your part reaches its destination.",
+      processTitle: "How We Work",
+      processIntro: "A simple process to quote, purchase, and ship your automotive parts.",
+      step1Title: "Request",
+      step1Text: "Send us the part, brand, model, year, or VIN.",
+      step2Title: "Quote",
+      step2Text: "We search for options and provide an estimated price.",
+      step3Title: "Purchase",
+      step3Text: "We confirm availability and manage the purchase.",
+      step4Title: "Shipping",
+      step4Text: "We coordinate logistics to Venezuela.",
+      galleryTitle: "Gallery",
+      galleryIntro: "Examples of vehicles, parts, and components we can manage.",
+      contactTitle: "Contact Us",
+      contactIntro: "Send us the details of the part you need and we will help you find it.",
+      markets: "Markets: USA / Venezuela",
+      whatsappButton: "Message us on WhatsApp",
+      footerText: "© 2026 San Miguel Import & Export. All rights reserved."
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    localStorage.setItem("siteLang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      element.textContent = translations[lang][key];
+    });
+
+    const message = lang === "en"
+      ? "Hello%20I%20would%20like%20to%20request%20a%20quote%20for%20an%20auto%20part"
+      : "Hola%20quiero%20cotizar%20un%20repuesto";
+
+    document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+      link.href = `https://wa.me/16893090939?text=${message}`;
+    });
+  }
+
+  setLang(localStorage.getItem("siteLang") || "es");
+</script>
 
 </body>
 </html>
