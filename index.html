@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SM Import Export</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+    }
+
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00ffcc;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      background: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+    }
+
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    @media(max-width: 768px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>SM Import Export</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<div class="hero" id="inicio">
+  <h2>Importación y Exportación de Repuestos Automotrices</h2>
+</div>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Compra en USA</h3>
+      <p>Adquirimos repuestos originales directamente desde Estados Unidos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Envíos a Venezuela</h3>
+      <p>Logística rápida y segura hasta tu destino.</p>
+    </div>
+
+    <div class="card">
+      <h3>Repuestos Originales</h3>
+      <p>Garantía de calidad en cada producto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>📧 contacto@sm-importexport.com</p>
+  <p>📱 WhatsApp: +58 XXXXXXXX</p>
+</section>
+
+<footer>
+  <p>© 2026 SM Import Export</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp" href="https://wa.me/16893090939" target="_blank">
+  💬
+</a>
+
+</body>
+</html>
