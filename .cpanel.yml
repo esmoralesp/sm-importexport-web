@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/smimbjqj/public_html/
+    - /bin/cp -R /home/smimbjqj/repositories/sm-importexport-web/* $DEPLOYPATH
