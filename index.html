@@ -2,330 +2,366 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>San Miguel Importación y Exportación</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>San Miguel Import Export</title>
   <link rel="icon" href="logo.png">
 
   <style>
-    * { box-sizing: border-box; scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #222;
-      background: #fff;
+    *{
+      box-sizing:border-box;
+      scroll-behavior:smooth;
     }
 
-    header {
-      background: #071426;
-      color: white;
-      padding: 14px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 4px 14px rgba(0,0,0,.25);
-      flex-wrap: wrap;
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:#fff;
+      color:#222;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    header{
+      background:#071426;
+      color:white;
+      padding:14px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:100;
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
+      flex-wrap:wrap;
     }
 
-    .brand img {
-      height: 70px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
 
-    .logo-text {
-      font-size: 24px;
-      font-weight: bold;
-      color: #d8a43a;
+    .brand img{
+      height:70px;
     }
 
-    .logo-text span {
-      display: block;
-      font-size: 12px;
-      color: #fff;
-      letter-spacing: 1.5px;
+    .logo-text{
+      font-size:24px;
+      font-weight:bold;
+      color:#d8a43a;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
+    .logo-text span{
+      display:block;
+      font-size:12px;
+      color:white;
+      letter-spacing:1.5px;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
     }
 
-    nav a:hover {
-      color: #d8a43a;
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:14px;
     }
 
-    .lang-buttons button {
-      background: transparent;
-      border: 1px solid #d8a43a;
-      color: white;
-      cursor: pointer;
-      padding: 6px 10px;
-      border-radius: 5px;
-      font-size: 20px;
-      transition: .3s;
+    nav a:hover{
+      color:#d8a43a;
     }
 
-    .lang-buttons button:hover {
-      background: #d8a43a;
-      transform: scale(1.08);
+    .lang-buttons button{
+      background:transparent;
+      border:1px solid #d8a43a;
+      color:white;
+      cursor:pointer;
+      padding:6px 10px;
+      border-radius:5px;
+      font-size:20px;
+      transition:.3s;
     }
 
-    .hero {
-      min-height: 550px;
+    .lang-buttons button:hover{
+      background:#d8a43a;
+      transform:scale(1.08);
+    }
+
+    .hero{
+      min-height:550px;
       background:
-        linear-gradient(rgba(7,20,38,.75), rgba(7,20,38,.75)),
-        url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3") center/cover;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 0 8%;
+      linear-gradient(rgba(7,20,38,.75), rgba(7,20,38,.75)),
+      url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3") center/cover;
+      color:white;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
     }
 
-    .hero-content {
-      max-width: 780px;
+    .hero-content{
+      max-width:780px;
     }
 
-    .hero h1 {
-      font-size: 52px;
-      margin-bottom: 15px;
-      line-height: 1.1;
+    .hero h1{
+      font-size:52px;
+      margin-bottom:15px;
+      line-height:1.1;
     }
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 25px;
-      line-height: 1.5;
+    .hero p{
+      font-size:20px;
+      margin-bottom:25px;
+      line-height:1.5;
     }
 
-    .btn {
-      display: inline-block;
-      background: #d8a43a;
-      color: #071426;
-      padding: 14px 24px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
+    .btn{
+      display:inline-block;
+      background:#d8a43a;
+      color:#071426;
+      padding:14px 24px;
+      border-radius:5px;
+      text-decoration:none;
+      font-weight:bold;
     }
 
-    .btn:hover {
-      background: #f0c15a;
+    .btn:hover{
+      background:#f0c15a;
     }
 
-    section {
-      padding: 70px 8%;
+    section{
+      padding:70px 8%;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
+    .section-title{
+      text-align:center;
+      margin-bottom:40px;
     }
 
-    .section-title h2 {
-      font-size: 36px;
-      color: #071426;
-      margin-bottom: 10px;
+    .section-title h2{
+      font-size:36px;
+      color:#071426;
+      margin-bottom:10px;
     }
 
-    .section-title p {
-      color: #666;
-      max-width: 760px;
-      margin: auto;
-      line-height: 1.6;
+    .section-title p{
+      color:#666;
+      max-width:760px;
+      margin:auto;
+      line-height:1.6;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 35px;
-      align-items: center;
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:35px;
+      align-items:center;
     }
 
-    .about-grid img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0,0,0,.14);
+    .about-grid img{
+      width:100%;
+      border-radius:8px;
+      box-shadow:0 8px 24px rgba(0,0,0,.14);
     }
 
-    .about-grid p {
-      line-height: 1.7;
-      color: #555;
+    .about-grid p{
+      line-height:1.7;
+      color:#555;
     }
 
-    .services {
-      background: #f5f5f5;
+    .services{
+      background:#f5f5f5;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:25px;
     }
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.08);
-      border-top: 4px solid #d8a43a;
-      min-height: 170px;
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      border-top:4px solid #d8a43a;
     }
 
-    .card h3 {
-      color: #071426;
-      margin-top: 0;
+    .card h3{
+      color:#071426;
+      margin-top:0;
     }
 
-    .card p {
-      color: #555;
-      line-height: 1.6;
+    .card p{
+      color:#555;
+      line-height:1.6;
     }
 
-    .engines-banner {
-      background: #071426;
-      color: white;
-      text-align: center;
+    .engines-banner{
+      background:#071426;
+      color:white;
+      text-align:center;
     }
 
-    .engines-banner h2 {
-      font-size: 36px;
-      color: white;
+    .engines-banner h2{
+      font-size:36px;
+      color:white;
     }
 
-    .engines-banner p {
-      max-width: 760px;
-      margin: auto auto 25px;
-      color: #ddd;
-      line-height: 1.6;
+    .engines-banner p{
+      max-width:760px;
+      margin:auto auto 25px;
+      color:#ddd;
+      line-height:1.6;
     }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      text-align: center;
+    .brands-section{
+      background:#f5f5f5;
+      padding:70px 8%;
     }
 
-    .step {
-      border: 2px solid #eee;
-      padding: 25px;
-      border-radius: 8px;
+    .brands-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+      align-items:center;
     }
 
-    .step span {
-      display: inline-block;
-      background: #d8a43a;
-      color: #071426;
-      width: 42px;
-      height: 42px;
-      line-height: 42px;
-      border-radius: 50%;
-      font-weight: bold;
-      margin-bottom: 12px;
+    .brand-card{
+      background:white;
+      border-radius:8px;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 4px 14px rgba(0,0,0,.08);
+      transition:.3s;
     }
 
-    .gallery {
-      background: #071426;
-      color: white;
+    .brand-card:hover{
+      transform:translateY(-5px);
     }
 
-    .gallery .section-title h2 {
-      color: white;
+    .brand-card img{
+      max-width:100%;
+      height:70px;
+      object-fit:contain;
     }
 
-    .gallery .section-title p {
-      color: #ddd;
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+      text-align:center;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+    .step{
+      border:2px solid #eee;
+      padding:25px;
+      border-radius:8px;
     }
 
-    .gallery-grid img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 6px;
+    .step span{
+      display:inline-block;
+      background:#d8a43a;
+      color:#071426;
+      width:42px;
+      height:42px;
+      line-height:42px;
+      border-radius:50%;
+      font-weight:bold;
+      margin-bottom:12px;
     }
 
-    .contact {
-      background: #d8a43a;
-      text-align: center;
+    .gallery{
+      background:#071426;
+      color:white;
     }
 
-    .contact-box {
-      background: white;
-      max-width: 760px;
-      margin: auto;
-      padding: 28px;
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    .gallery .section-title h2{
+      color:white;
     }
 
-    footer {
-      background: #071426;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .gallery .section-title p{
+      color:#ddd;
     }
 
-    .whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
-      z-index: 20;
-      box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
     }
 
-    @media(max-width: 900px) {
-      header {
-        flex-direction: column;
-        gap: 14px;
+    .gallery-grid img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      border-radius:6px;
+    }
+
+    .contact{
+      background:#d8a43a;
+      text-align:center;
+    }
+
+    .contact-box{
+      background:white;
+      max-width:760px;
+      margin:auto;
+      padding:28px;
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(0,0,0,.15);
+    }
+
+    footer{
+      background:#071426;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    .whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      background:#25D366;
+      color:white;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      text-decoration:none;
+      z-index:20;
+      box-shadow:0 5px 15px rgba(0,0,0,.3);
+    }
+
+    @media(max-width:900px){
+
+      header{
+        flex-direction:column;
+        gap:14px;
       }
 
-      nav {
-        justify-content: center;
-        gap: 12px;
+      nav{
+        justify-content:center;
+        gap:12px;
       }
 
-      .hero h1 {
-        font-size: 36px;
+      .hero h1{
+        font-size:36px;
       }
 
       .grid,
       .gallery-grid,
       .about-grid,
-      .steps {
-        grid-template-columns: 1fr;
+      .steps,
+      .brands-grid{
+        grid-template-columns:1fr;
       }
+
     }
   </style>
 </head>
@@ -333,8 +369,9 @@
 <body>
 
 <header>
+
   <div class="brand">
-    <img src="logo.png" alt="San Miguel Importación y Exportación">
+    <img src="logo.png">
 
     <div class="logo-text">
       San Miguel
@@ -353,15 +390,20 @@
     <a href="#contacto" data-i18n="navContact">Contacto</a>
 
     <div class="lang-buttons">
-      <button onclick="setLang('es')" title="Español">🇪🇸</button>
-      <button onclick="setLang('en')" title="English">🇺🇸</button>
+      <button onclick="setLang('es')">🇪🇸</button>
+      <button onclick="setLang('en')">🇺🇸</button>
     </div>
   </nav>
+
 </header>
 
 <section class="hero" id="inicio">
+
   <div class="hero-content">
-    <h1 data-i18n="heroTitle">Importación y exportación de repuestos automotrices</h1>
+
+    <h1 data-i18n="heroTitle">
+      Importación y exportación de repuestos automotrices
+    </h1>
 
     <p data-i18n="heroSubtitle">
       Compra en USA y envío seguro a Venezuela.
@@ -370,50 +412,65 @@
     <a class="btn" href="#contacto" data-i18n="heroButton">
       Cotizar ahora
     </a>
+
   </div>
+
 </section>
 
 <section id="nosotros">
+
   <div class="section-title">
-    <h2 data-i18n="aboutTitle">Quiénes somos</h2>
+
+    <h2 data-i18n="aboutTitle">
+      Quiénes somos
+    </h2>
 
     <p data-i18n="aboutIntro">
       Soluciones confiables para importar y exportar repuestos automotrices.
     </p>
+
   </div>
 
   <div class="about-grid">
+
     <div>
+
       <p data-i18n="aboutP1">
-        En San Miguel Importación y Exportación nos especializamos en la búsqueda,
-        compra y envío de repuestos automotrices hacia Venezuela.
+        Especialistas en búsqueda y envío de repuestos automotrices.
       </p>
 
       <p data-i18n="aboutP2">
-        Nuestro objetivo es entregar una solución segura, rápida y transparente
-        para personas, talleres y empresas que necesitan piezas de calidad desde el exterior.
+        Atendemos personas, talleres y empresas.
       </p>
 
       <p data-i18n="aboutP3">
-        Trabajamos bajo pedido, revisando disponibilidad, precio y logística para
-        que cada cliente tenga una experiencia clara desde la cotización hasta la entrega.
+        Trabajamos bajo pedido y logística internacional.
       </p>
+
     </div>
 
-    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" alt="Vehicle">
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7">
+
   </div>
+
 </section>
 
 <section class="services" id="servicios">
+
   <div class="section-title">
-    <h2 data-i18n="servicesTitle">Nuestros servicios</h2>
+
+    <h2 data-i18n="servicesTitle">
+      Nuestros servicios
+    </h2>
 
     <p data-i18n="servicesIntro">
-      Gestionamos repuestos nuevos, usados, partes bajo pedido y soluciones de logística internacional.
+      Importación y exportación automotriz.
     </p>
+
   </div>
 
   <div class="grid">
+
     <div class="card">
       <h3 data-i18n="service1Title">Repuestos automotrices</h3>
       <p data-i18n="service1Text">Piezas para diferentes marcas y modelos.</p>
@@ -426,70 +483,138 @@
 
     <div class="card">
       <h3 data-i18n="service3Title">Partes de carrocería</h3>
-      <p data-i18n="service3Text">Parachoques, puertas, ópticas y paneles.</p>
+      <p data-i18n="service3Text">Parachoques, puertas y paneles.</p>
     </div>
 
     <div class="card">
       <h3 data-i18n="service4Title">Suspensión y tren delantero</h3>
-      <p data-i18n="service4Text">Dirección, suspensión y frenos.</p>
+      <p data-i18n="service4Text">Dirección y frenos.</p>
     </div>
 
     <div class="card">
       <h3 data-i18n="service5Title">Compra bajo pedido</h3>
-      <p data-i18n="service5Text">Búsqueda personalizada de piezas.</p>
+      <p data-i18n="service5Text">Búsqueda personalizada.</p>
     </div>
 
     <div class="card">
       <h3 data-i18n="service6Title">Exportación a Venezuela</h3>
       <p data-i18n="service6Text">Coordinamos logística y envío.</p>
     </div>
+
   </div>
+
 </section>
 
 <section class="engines-banner">
-  <h2 data-i18n="enginesTitle">Catálogo de motores</h2>
+
+  <h2 data-i18n="enginesTitle">
+    Catálogo de motores
+  </h2>
 
   <p data-i18n="enginesText">
-    Revisa nuestra lista de motores disponibles para cotización.
+    Revisa nuestra lista de motores disponibles.
   </p>
 
   <a class="btn" href="motores.html" data-i18n="enginesButton">
     Ver motores
   </a>
+
 </section>
 
 <section class="engines-banner" style="background:#10233f;">
-  <h2 data-i18n="accessoriesTitle">Accesorios automotrices</h2>
+
+  <h2 data-i18n="accessoriesTitle">
+    Accesorios automotrices
+  </h2>
 
   <p data-i18n="accessoriesText">
-    Explora nuestro catálogo de accesorios y partes automotrices.
+    Explora nuestro catálogo de accesorios.
   </p>
 
   <a class="btn" href="accesorios.html" data-i18n="accessoriesButton">
     Ver accesorios
   </a>
+
+</section>
+
+<section class="brands-section">
+
+  <div class="section-title">
+
+    <h2 data-i18n="brandsTitle">
+      Marcas con las que trabajamos
+    </h2>
+
+    <p data-i18n="brandsSubtitle">
+      Importamos repuestos, motores y accesorios para múltiples marcas automotrices.
+    </p>
+
+  </div>
+
+  <div class="brands-grid">
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Chevrolet-logo.png">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Jeep_logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Dodge_logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda-logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Kia-logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg">
+    </div>
+
+  </div>
+
 </section>
 
 <section id="proceso">
+
   <div class="section-title">
-    <h2 data-i18n="processTitle">Cómo trabajamos</h2>
+
+    <h2 data-i18n="processTitle">
+      Cómo trabajamos
+    </h2>
 
     <p data-i18n="processIntro">
-      Un proceso simple para cotizar, comprar y enviar tus repuestos.
+      Proceso simple y rápido.
     </p>
+
   </div>
 
   <div class="steps">
+
     <div class="step">
       <span>1</span>
       <h3 data-i18n="step1Title">Solicitud</h3>
-      <p data-i18n="step1Text">Envíanos marca, modelo o VIN.</p>
+      <p data-i18n="step1Text">Envíanos modelo o VIN.</p>
     </div>
 
     <div class="step">
       <span>2</span>
       <h3 data-i18n="step2Title">Cotización</h3>
-      <p data-i18n="step2Text">Buscamos opciones y precios.</p>
+      <p data-i18n="step2Text">Buscamos opciones.</p>
     </div>
 
     <div class="step">
@@ -501,35 +626,49 @@
     <div class="step">
       <span>4</span>
       <h3 data-i18n="step4Title">Envío</h3>
-      <p data-i18n="step4Text">Coordinamos logística hasta destino.</p>
+      <p data-i18n="step4Text">Coordinamos logística.</p>
     </div>
+
   </div>
+
 </section>
 
 <section class="gallery" id="galeria">
+
   <div class="section-title">
-    <h2 data-i18n="galleryTitle">Galería</h2>
+
+    <h2 data-i18n="galleryTitle">
+      Galería
+    </h2>
 
     <p data-i18n="galleryIntro">
-      Ejemplos de vehículos y repuestos disponibles.
+      Vehículos y repuestos disponibles.
     </p>
+
   </div>
 
   <div class="gallery-grid">
+
     <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d">
     <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98">
     <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3">
+
   </div>
+
 </section>
 
 <section class="contact" id="contacto">
-  <h2 data-i18n="contactTitle">Contáctanos</h2>
+
+  <h2 data-i18n="contactTitle">
+    Contáctanos
+  </h2>
 
   <p data-i18n="contactIntro">
-    Envíanos los datos del repuesto que necesitas.
+    Envíanos los datos del repuesto.
   </p>
 
   <div class="contact-box">
+
     <p><strong>Email:</strong> contacto@sm-importexport.com</p>
 
     <p><strong>WhatsApp:</strong> +1 (689) 309-0939</p>
@@ -543,201 +682,212 @@
     </p>
 
     <a class="btn"
-       href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto"
+       href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
        target="_blank"
        data-i18n="whatsappButton">
       Escribir por WhatsApp
     </a>
+
   </div>
+
 </section>
 
 <footer>
+
   <p data-i18n="footerText">
     © 2026 San Miguel Import Export. Todos los derechos reservados.
   </p>
+
 </footer>
 
 <a class="whatsapp"
-   href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar%20un%20repuesto"
+   href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
    target="_blank">💬</a>
 
 <script>
 const translations = {
+
   es: {
-    navHome: "Inicio",
-    navAbout: "Nosotros",
-    navServices: "Servicios",
-    navEngines: "Motores",
-    navAccessories: "Accesorios",
-    navProcess: "Proceso",
-    navGallery: "Galería",
-    navContact: "Contacto",
 
-    heroTitle: "Importación y exportación de repuestos automotrices",
-    heroSubtitle: "Compra en USA y envío seguro a Venezuela.",
-    heroButton: "Cotizar ahora",
+    navHome:"Inicio",
+    navAbout:"Nosotros",
+    navServices:"Servicios",
+    navEngines:"Motores",
+    navAccessories:"Accesorios",
+    navProcess:"Proceso",
+    navGallery:"Galería",
+    navContact:"Contacto",
 
-    aboutTitle: "Quiénes somos",
-    aboutIntro: "Soluciones confiables para importar y exportar repuestos automotrices.",
+    heroTitle:"Importación y exportación de repuestos automotrices",
+    heroSubtitle:"Compra en USA y envío seguro a Venezuela.",
+    heroButton:"Cotizar ahora",
 
-    aboutP1: "Especialistas en búsqueda y envío de repuestos automotrices.",
-    aboutP2: "Atendemos personas, talleres y empresas.",
-    aboutP3: "Trabajamos bajo pedido y logística internacional.",
+    aboutTitle:"Quiénes somos",
+    aboutIntro:"Soluciones confiables para importar y exportar repuestos automotrices.",
 
-    servicesTitle: "Nuestros servicios",
-    servicesIntro: "Importación y exportación automotriz.",
+    aboutP1:"Especialistas en búsqueda y envío de repuestos automotrices.",
+    aboutP2:"Atendemos personas, talleres y empresas.",
+    aboutP3:"Trabajamos bajo pedido y logística internacional.",
 
-    service1Title: "Repuestos automotrices",
-    service1Text: "Piezas para diferentes marcas y modelos.",
+    servicesTitle:"Nuestros servicios",
+    servicesIntro:"Importación y exportación automotriz.",
 
-    service2Title: "Motores y transmisiones",
-    service2Text: "Gestión de compra y exportación.",
+    service1Title:"Repuestos automotrices",
+    service1Text:"Piezas para diferentes marcas y modelos.",
 
-    service3Title: "Partes de carrocería",
-    service3Text: "Parachoques, puertas y paneles.",
+    service2Title:"Motores y transmisiones",
+    service2Text:"Gestión de compra y exportación.",
 
-    service4Title: "Suspensión y tren delantero",
-    service4Text: "Dirección y frenos.",
+    service3Title:"Partes de carrocería",
+    service3Text:"Parachoques, puertas y paneles.",
 
-    service5Title: "Compra bajo pedido",
-    service5Text: "Búsqueda personalizada.",
+    service4Title:"Suspensión y tren delantero",
+    service4Text:"Dirección y frenos.",
 
-    service6Title: "Exportación a Venezuela",
-    service6Text: "Coordinamos logística y envío.",
+    service5Title:"Compra bajo pedido",
+    service5Text:"Búsqueda personalizada.",
 
-    enginesTitle: "Catálogo de motores",
-    enginesText: "Revisa nuestra lista de motores disponibles.",
-    enginesButton: "Ver motores",
+    service6Title:"Exportación a Venezuela",
+    service6Text:"Coordinamos logística y envío.",
 
-    accessoriesTitle: "Accesorios automotrices",
-    accessoriesText: "Explora nuestro catálogo de accesorios.",
-    accessoriesButton: "Ver accesorios",
+    enginesTitle:"Catálogo de motores",
+    enginesText:"Revisa nuestra lista de motores disponibles.",
+    enginesButton:"Ver motores",
 
-    processTitle: "Cómo trabajamos",
-    processIntro: "Proceso simple y rápido.",
+    accessoriesTitle:"Accesorios automotrices",
+    accessoriesText:"Explora nuestro catálogo de accesorios.",
+    accessoriesButton:"Ver accesorios",
 
-    step1Title: "Solicitud",
-    step1Text: "Envíanos modelo o VIN.",
+    brandsTitle:"Marcas con las que trabajamos",
+    brandsSubtitle:"Importamos repuestos, motores y accesorios para múltiples marcas automotrices.",
 
-    step2Title: "Cotización",
-    step2Text: "Buscamos opciones.",
+    processTitle:"Cómo trabajamos",
+    processIntro:"Proceso simple y rápido.",
 
-    step3Title: "Compra",
-    step3Text: "Confirmamos disponibilidad.",
+    step1Title:"Solicitud",
+    step1Text:"Envíanos modelo o VIN.",
 
-    step4Title: "Envío",
-    step4Text: "Coordinamos logística.",
+    step2Title:"Cotización",
+    step2Text:"Buscamos opciones.",
 
-    galleryTitle: "Galería",
-    galleryIntro: "Vehículos y repuestos disponibles.",
+    step3Title:"Compra",
+    step3Text:"Confirmamos disponibilidad.",
 
-    contactTitle: "Contáctanos",
-    contactIntro: "Envíanos los datos del repuesto.",
+    step4Title:"Envío",
+    step4Text:"Coordinamos logística.",
 
-    address: "Dirección: 18285 Old Cheney Hwy, Orlando, FL 32820, EE.UU.",
-    markets: "Mercados: USA / Venezuela",
+    galleryTitle:"Galería",
+    galleryIntro:"Vehículos y repuestos disponibles.",
 
-    whatsappButton: "Escribir por WhatsApp",
+    contactTitle:"Contáctanos",
+    contactIntro:"Envíanos los datos del repuesto.",
 
-    footerText: "© 2026 San Miguel Import Export. Todos los derechos reservados."
+    address:"Dirección: 18285 Old Cheney Hwy, Orlando, FL 32820, EE.UU.",
+    markets:"Mercados: USA / Venezuela",
+
+    whatsappButton:"Escribir por WhatsApp",
+
+    footerText:"© 2026 San Miguel Import Export. Todos los derechos reservados."
   },
 
   en: {
-    navHome: "Home",
-    navAbout: "About",
-    navServices: "Services",
-    navEngines: "Engines",
-    navAccessories: "Accessories",
-    navProcess: "Process",
-    navGallery: "Gallery",
-    navContact: "Contact",
 
-    heroTitle: "Import and export of automotive parts",
-    heroSubtitle: "Buy in the USA and ship safely to Venezuela.",
-    heroButton: "Request quote",
+    navHome:"Home",
+    navAbout:"About",
+    navServices:"Services",
+    navEngines:"Engines",
+    navAccessories:"Accessories",
+    navProcess:"Process",
+    navGallery:"Gallery",
+    navContact:"Contact",
 
-    aboutTitle: "About us",
-    aboutIntro: "Reliable automotive import and export solutions.",
+    heroTitle:"Import and export of automotive parts",
+    heroSubtitle:"Buy in the USA and ship safely to Venezuela.",
+    heroButton:"Request quote",
 
-    aboutP1: "Specialists in sourcing and shipping automotive parts.",
-    aboutP2: "We serve individuals, workshops and companies.",
-    aboutP3: "International logistics and special orders.",
+    aboutTitle:"About us",
+    aboutIntro:"Reliable automotive import and export solutions.",
 
-    servicesTitle: "Our services",
-    servicesIntro: "Automotive import and export services.",
+    aboutP1:"Specialists in sourcing and shipping automotive parts.",
+    aboutP2:"We serve individuals, workshops and companies.",
+    aboutP3:"International logistics and special orders.",
 
-    service1Title: "Automotive parts",
-    service1Text: "Parts for multiple brands and models.",
+    servicesTitle:"Our services",
+    servicesIntro:"Automotive import and export services.",
 
-    service2Title: "Engines and transmissions",
-    service2Text: "Purchase and export management.",
+    service1Title:"Automotive parts",
+    service1Text:"Parts for multiple brands and models.",
 
-    service3Title: "Body parts",
-    service3Text: "Bumpers, doors and panels.",
+    service2Title:"Engines and transmissions",
+    service2Text:"Purchase and export management.",
 
-    service4Title: "Suspension and steering",
-    service4Text: "Steering and brake systems.",
+    service3Title:"Body parts",
+    service3Text:"Bumpers, doors and panels.",
 
-    service5Title: "Special orders",
-    service5Text: "Custom parts sourcing.",
+    service4Title:"Suspension and steering",
+    service4Text:"Steering and brake systems.",
 
-    service6Title: "Export to Venezuela",
-    service6Text: "We coordinate logistics and shipping.",
+    service5Title:"Special orders",
+    service5Text:"Custom parts sourcing.",
 
-    enginesTitle: "Engine catalog",
-    enginesText: "Browse our available engine list.",
-    enginesButton: "View engines",
+    service6Title:"Export to Venezuela",
+    service6Text:"We coordinate logistics and shipping.",
 
-    accessoriesTitle: "Automotive accessories",
-    accessoriesText: "Explore our accessories catalog.",
-    accessoriesButton: "View accessories",
+    enginesTitle:"Engine catalog",
+    enginesText:"Browse our available engine list.",
+    enginesButton:"View engines",
 
-    processTitle: "How we work",
-    processIntro: "Simple and fast process.",
+    accessoriesTitle:"Automotive accessories",
+    accessoriesText:"Explore our accessories catalog.",
+    accessoriesButton:"View accessories",
 
-    step1Title: "Request",
-    step1Text: "Send us VIN or model.",
+    brandsTitle:"Brands we work with",
+    brandsSubtitle:"We import parts, engines, and accessories for multiple automotive brands.",
 
-    step2Title: "Quote",
-    step2Text: "We search options.",
+    processTitle:"How we work",
+    processIntro:"Simple and fast process.",
 
-    step3Title: "Purchase",
-    step3Text: "Availability confirmation.",
+    step1Title:"Request",
+    step1Text:"Send us VIN or model.",
 
-    step4Title: "Shipping",
-    step4Text: "We coordinate logistics.",
+    step2Title:"Quote",
+    step2Text:"We search options.",
 
-    galleryTitle: "Gallery",
-    galleryIntro: "Vehicles and available parts.",
+    step3Title:"Purchase",
+    step3Text:"Availability confirmation.",
 
-    contactTitle: "Contact us",
-    contactIntro: "Send us your requested part.",
+    step4Title:"Shipping",
+    step4Text:"We coordinate logistics.",
 
-    address: "Address: 18285 Old Cheney Hwy, Orlando, FL 32820, USA",
-    markets: "Markets: USA / Venezuela",
+    galleryTitle:"Gallery",
+    galleryIntro:"Vehicles and available parts.",
 
-    whatsappButton: "Message on WhatsApp",
+    contactTitle:"Contact us",
+    contactIntro:"Send us your requested part.",
 
-    footerText: "© 2026 San Miguel Import Export. All rights reserved."
+    address:"Address: 18285 Old Cheney Hwy, Orlando, FL 32820, USA",
+    markets:"Markets: USA / Venezuela",
+
+    whatsappButton:"Message on WhatsApp",
+
+    footerText:"© 2026 San Miguel Import Export. All rights reserved."
   }
 };
 
-function setLang(lang) {
+function setLang(lang){
+
   document.documentElement.lang = lang;
+
   localStorage.setItem("siteLang", lang);
 
-  document.querySelectorAll("[data-i18n]").forEach((element) => {
+  document.querySelectorAll("[data-i18n]").forEach((element)=>{
+
     const key = element.getAttribute("data-i18n");
+
     element.textContent = translations[lang][key];
+
   });
 
-  const message = lang === "en"
-    ? "Hello%20I%20would%20like%20to%20request%20a%20quote"
-    : "Hola%20quiero%20cotizar";
-
-  document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
-    link.href = `https://wa.me/16893090939?text=${message}`;
-  });
 }
 
 setLang(localStorage.getItem("siteLang") || "es");
