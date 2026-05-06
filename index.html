@@ -227,7 +227,7 @@
 
     .brands-grid{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+      grid-template-columns:repeat(6,1fr);
       gap:25px;
       align-items:center;
     }
@@ -508,33 +508,33 @@
 
   </div>
 
-  <<div class="brands-grid">
+  <div class="brands-grid">
 
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg">
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Chevrolet-logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Jeep_1987_logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Dodge_logo.svg">
+    </div>
+
+    <div class="brand-card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg">
+    </div>
+
   </div>
-
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Chevrolet-logo.svg">
-  </div>
-
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg">
-  </div>
-
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Jeep_1987_logo.svg">
-  </div>
-
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Dodge_logo.svg">
-  </div>
-
-  <div class="brand-card">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg">
-  </div>
-
-</div>
 
 </section>
 
@@ -570,6 +570,59 @@
 
 </section>
 
+<section class="contact" id="contacto">
+
+  <h2 data-i18n="contactTitle">
+    Contáctanos
+  </h2>
+
+  <p data-i18n="contactIntro">
+    Envíanos los datos del repuesto.
+  </p>
+
+  <div class="contact-box">
+
+    <p><strong>Email:</strong> contacto@sm-importexport.com</p>
+
+    <p><strong>WhatsApp:</strong> +1 (689) 309-0939</p>
+
+    <p data-i18n="address">
+      Dirección: 1824 La Crosse Ave, Orlando FL, EE.UU.
+    </p>
+
+    <p data-i18n="markets">
+      Mercados: USA / Venezuela
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
+       target="_blank"
+       data-i18n="whatsappButton">
+
+      Escribir por WhatsApp
+
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p data-i18n="footerText">
+    © 2026 San Miguel Import Export. Todos los derechos reservados.
+  </p>
+
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
+   target="_blank">
+
+💬
+
+</a>
+
 <script>
 
 const translations = {
@@ -591,6 +644,7 @@ const translations = {
 
     aboutTitle:"Quiénes somos",
     aboutIntro:"Soluciones confiables para importar y exportar repuestos automotrices.",
+
     aboutP1:"Especialistas en búsqueda y envío de repuestos automotrices.",
     aboutP2:"Atendemos personas, talleres y empresas.",
     aboutP3:"Trabajamos bajo pedido y logística internacional.",
@@ -616,7 +670,17 @@ const translations = {
 
     accessoriesTitle:"Accesorios automotrices",
     accessoriesText:"Explora nuestro catálogo de accesorios.",
-    accessoriesButton:"Ver accesorios"
+    accessoriesButton:"Ver accesorios",
+
+    contactTitle:"Contáctanos",
+    contactIntro:"Envíanos los datos del repuesto.",
+
+    address:"Dirección: 1824 La Crosse Ave, Orlando FL, EE.UU.",
+    markets:"Mercados: USA / Venezuela",
+
+    whatsappButton:"Escribir por WhatsApp",
+
+    footerText:"© 2026 San Miguel Import Export. Todos los derechos reservados."
   },
 
   en: {
@@ -636,6 +700,7 @@ const translations = {
 
     aboutTitle:"About us",
     aboutIntro:"Reliable automotive import and export solutions.",
+
     aboutP1:"Specialists in sourcing and shipping automotive parts.",
     aboutP2:"We serve individuals, workshops and companies.",
     aboutP3:"International logistics and special orders.",
@@ -661,7 +726,17 @@ const translations = {
 
     accessoriesTitle:"Automotive accessories",
     accessoriesText:"Explore our accessories catalog.",
-    accessoriesButton:"View accessories"
+    accessoriesButton:"View accessories",
+
+    contactTitle:"Contact us",
+    contactIntro:"Send us your requested part.",
+
+    address:"Address: 1824 La Crosse Ave, Orlando FL, USA",
+    markets:"Markets: USA / Venezuela",
+
+    whatsappButton:"Message on WhatsApp",
+
+    footerText:"© 2026 San Miguel Import Export. All rights reserved."
   }
 };
 
