@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -386,18 +387,18 @@
 
   <nav>
 
-    <a href="#inicio">Inicio</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#servicios">Servicios</a>
-    <a href="motores.html">Motores</a>
-    <a href="accesorios.html">Accesorios</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#galeria">Galería</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#inicio" data-i18n="navHome">Inicio</a>
+    <a href="#nosotros" data-i18n="navAbout">Nosotros</a>
+    <a href="#servicios" data-i18n="navServices">Servicios</a>
+    <a href="motores.html" data-i18n="navEngines">Motores</a>
+    <a href="accesorios.html" data-i18n="navAccessories">Accesorios</a>
+    <a href="#proceso" data-i18n="navProcess">Proceso</a>
+    <a href="#galeria" data-i18n="navGallery">Galería</a>
+    <a href="#contacto" data-i18n="navContact">Contacto</a>
 
     <div class="lang-buttons">
-      <button>🇪🇸</button>
-      <button>🇺🇸</button>
+      <button onclick="setLang('es')">🇪🇸</button>
+      <button onclick="setLang('en')">🇺🇸</button>
     </div>
 
   </nav>
@@ -408,15 +409,15 @@
 
   <div class="hero-content">
 
-    <h1>
+    <h1 data-i18n="heroTitle">
       Importación y exportación de repuestos automotrices
     </h1>
 
-    <p>
+    <p data-i18n="heroSubtitle">
       Compra en USA y envío seguro a Venezuela.
     </p>
 
-    <a class="btn" href="#contacto">
+    <a class="btn" href="#contacto" data-i18n="heroButton">
       Cotizar ahora
     </a>
 
@@ -428,9 +429,9 @@
 
   <div class="section-title">
 
-    <h2>Quiénes somos</h2>
+    <h2 data-i18n="aboutTitle">Quiénes somos</h2>
 
-    <p>
+    <p data-i18n="aboutIntro">
       Soluciones confiables para importar y exportar repuestos automotrices.
     </p>
 
@@ -440,15 +441,15 @@
 
     <div>
 
-      <p>
+      <p data-i18n="aboutP1">
         Especialistas en búsqueda y envío de repuestos automotrices.
       </p>
 
-      <p>
+      <p data-i18n="aboutP2">
         Atendemos personas, talleres y empresas.
       </p>
 
-      <p>
+      <p data-i18n="aboutP3">
         Trabajamos bajo pedido y logística internacional.
       </p>
 
@@ -464,9 +465,9 @@
 
   <div class="section-title">
 
-    <h2>Nuestros servicios</h2>
+    <h2 data-i18n="servicesTitle">Nuestros servicios</h2>
 
-    <p>
+    <p data-i18n="servicesIntro">
       Importación y exportación automotriz.
     </p>
 
@@ -475,50 +476,33 @@
   <div class="grid">
 
     <div class="card">
-      <h3>Repuestos automotrices</h3>
-      <p>Piezas para diferentes marcas y modelos.</p>
+      <h3 data-i18n="service1Title">Repuestos automotrices</h3>
+      <p data-i18n="service1Text">Piezas para diferentes marcas y modelos.</p>
     </div>
 
     <div class="card">
-      <h3>Motores y transmisiones</h3>
-      <p>Gestión de compra y exportación.</p>
+      <h3 data-i18n="service2Title">Motores y transmisiones</h3>
+      <p data-i18n="service2Text">Gestión de compra y exportación.</p>
     </div>
 
     <div class="card">
-      <h3>Partes de carrocería</h3>
-      <p>Parachoques, puertas y paneles.</p>
-    </div>
-
-    <div class="card">
-      <h3>Suspensión y tren delantero</h3>
-      <p>Dirección y frenos.</p>
-    </div>
-
-    <div class="card">
-      <h3>Compra bajo pedido</h3>
-      <p>Búsqueda personalizada.</p>
-    </div>
-
-    <div class="card">
-      <h3>Exportación a Venezuela</h3>
-      <p>Coordinamos logística y envío.</p>
+      <h3 data-i18n="service3Title">Partes de carrocería</h3>
+      <p data-i18n="service3Text">Parachoques, puertas y paneles.</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- MARCAS ANTES DEL CATÁLOGO -->
-
 <section class="brands-section">
 
   <div class="section-title">
 
-    <h2>
+    <h2 data-i18n="brandsTitle">
       Marcas con las que trabajamos
     </h2>
 
-    <p>
+    <p data-i18n="brandsSubtitle">
       Importamos repuestos, motores y accesorios para múltiples marcas automotrices.
     </p>
 
@@ -542,37 +526,21 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Jeep_1987_logo.svg">
     </div>
 
-    <div class="brand-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Dodge_logo.svg">
-    </div>
-
-    <div class="brand-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg">
-    </div>
-
-    <div class="brand-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Kia_Motors_2002-2012_Logo.svg">
-    </div>
-
-    <div class="brand-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg">
-    </div>
-
   </div>
 
 </section>
 
 <section class="engines-banner">
 
-  <h2>
+  <h2 data-i18n="enginesTitle">
     Catálogo de motores
   </h2>
 
-  <p>
+  <p data-i18n="enginesText">
     Revisa nuestra lista de motores disponibles.
   </p>
 
-  <a class="btn" href="motores.html">
+  <a class="btn" href="motores.html" data-i18n="enginesButton">
     Ver motores
   </a>
 
@@ -580,137 +548,134 @@
 
 <section class="engines-banner" style="background:#10233f;">
 
-  <h2>
+  <h2 data-i18n="accessoriesTitle">
     Accesorios automotrices
   </h2>
 
-  <p>
+  <p data-i18n="accessoriesText">
     Explora nuestro catálogo de accesorios.
   </p>
 
-  <a class="btn" href="accesorios.html">
+  <a class="btn" href="accesorios.html" data-i18n="accessoriesButton">
     Ver accesorios
   </a>
 
 </section>
 
-<section id="proceso">
+<script>
 
-  <div class="section-title">
+const translations = {
 
-    <h2>Cómo trabajamos</h2>
+  es: {
 
-    <p>
-      Proceso simple y rápido.
-    </p>
+    navHome:"Inicio",
+    navAbout:"Nosotros",
+    navServices:"Servicios",
+    navEngines:"Motores",
+    navAccessories:"Accesorios",
+    navProcess:"Proceso",
+    navGallery:"Galería",
+    navContact:"Contacto",
 
-  </div>
+    heroTitle:"Importación y exportación de repuestos automotrices",
+    heroSubtitle:"Compra en USA y envío seguro a Venezuela.",
+    heroButton:"Cotizar ahora",
 
-  <div class="steps">
+    aboutTitle:"Quiénes somos",
+    aboutIntro:"Soluciones confiables para importar y exportar repuestos automotrices.",
+    aboutP1:"Especialistas en búsqueda y envío de repuestos automotrices.",
+    aboutP2:"Atendemos personas, talleres y empresas.",
+    aboutP3:"Trabajamos bajo pedido y logística internacional.",
 
-    <div class="step">
-      <span>1</span>
-      <h3>Solicitud</h3>
-      <p>Envíanos modelo o VIN.</p>
-    </div>
+    servicesTitle:"Nuestros servicios",
+    servicesIntro:"Importación y exportación automotriz.",
 
-    <div class="step">
-      <span>2</span>
-      <h3>Cotización</h3>
-      <p>Buscamos opciones.</p>
-    </div>
+    service1Title:"Repuestos automotrices",
+    service1Text:"Piezas para diferentes marcas y modelos.",
 
-    <div class="step">
-      <span>3</span>
-      <h3>Compra</h3>
-      <p>Confirmamos disponibilidad.</p>
-    </div>
+    service2Title:"Motores y transmisiones",
+    service2Text:"Gestión de compra y exportación.",
 
-    <div class="step">
-      <span>4</span>
-      <h3>Envío</h3>
-      <p>Coordinamos logística.</p>
-    </div>
+    service3Title:"Partes de carrocería",
+    service3Text:"Parachoques, puertas y paneles.",
 
-  </div>
+    brandsTitle:"Marcas con las que trabajamos",
+    brandsSubtitle:"Importamos repuestos, motores y accesorios para múltiples marcas automotrices.",
 
-</section>
+    enginesTitle:"Catálogo de motores",
+    enginesText:"Revisa nuestra lista de motores disponibles.",
+    enginesButton:"Ver motores",
 
-<section class="gallery" id="galeria">
+    accessoriesTitle:"Accesorios automotrices",
+    accessoriesText:"Explora nuestro catálogo de accesorios.",
+    accessoriesButton:"Ver accesorios"
+  },
 
-  <div class="section-title">
+  en: {
 
-    <h2>Galería</h2>
+    navHome:"Home",
+    navAbout:"About",
+    navServices:"Services",
+    navEngines:"Engines",
+    navAccessories:"Accessories",
+    navProcess:"Process",
+    navGallery:"Gallery",
+    navContact:"Contact",
 
-    <p>
-      Vehículos y repuestos disponibles.
-    </p>
+    heroTitle:"Import and export of automotive parts",
+    heroSubtitle:"Buy in the USA and ship safely to Venezuela.",
+    heroButton:"Request quote",
 
-  </div>
+    aboutTitle:"About us",
+    aboutIntro:"Reliable automotive import and export solutions.",
+    aboutP1:"Specialists in sourcing and shipping automotive parts.",
+    aboutP2:"We serve individuals, workshops and companies.",
+    aboutP3:"International logistics and special orders.",
 
-  <div class="gallery-grid">
+    servicesTitle:"Our services",
+    servicesIntro:"Automotive import and export services.",
 
-    <img src="motores.jpg">
-    <img src="motor.jpg">
-    <img src="panel1.jpg">
-    <img src="panel2.jpg">
-    <img src="pickup1.jpg">
-    <img src="camion1.jpg">
-    <img src="camion2.jpg">
+    service1Title:"Automotive parts",
+    service1Text:"Parts for multiple brands and models.",
 
-  </div>
+    service2Title:"Engines and transmissions",
+    service2Text:"Purchase and export management.",
 
-</section>
+    service3Title:"Body parts",
+    service3Text:"Bumpers, doors and panels.",
 
-<section class="contact" id="contacto">
+    brandsTitle:"Brands we work with",
+    brandsSubtitle:"We import parts, engines, and accessories for multiple automotive brands.",
 
-  <h2>Contáctanos</h2>
+    enginesTitle:"Engine catalog",
+    enginesText:"Browse our available engine list.",
+    enginesButton:"View engines",
 
-  <p>
-    Envíanos los datos del repuesto.
-  </p>
+    accessoriesTitle:"Automotive accessories",
+    accessoriesText:"Explore our accessories catalog.",
+    accessoriesButton:"View accessories"
+  }
+};
 
-  <div class="contact-box">
+function setLang(lang){
 
-    <p><strong>Email:</strong> contacto@sm-importexport.com</p>
+  document.documentElement.lang = lang;
 
-    <p><strong>WhatsApp:</strong> +1 (689) 309-0939</p>
+  localStorage.setItem("siteLang", lang);
 
-    <p>
-      Dirección: 1824 La Crosse Ave, Orlando FL, EE.UU.
-    </p>
+  document.querySelectorAll("[data-i18n]").forEach((element)=>{
 
-    <p>
-      Mercados: USA / Venezuela
-    </p>
+    const key = element.getAttribute("data-i18n");
 
-    <a class="btn"
-       href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
-       target="_blank">
+    element.textContent = translations[lang][key];
 
-      Escribir por WhatsApp
+  });
 
-    </a>
+}
 
-  </div>
+setLang(localStorage.getItem("siteLang") || "es");
 
-</section>
-
-<footer>
-
-  <p>
-    © 2026 San Miguel Import Export. Todos los derechos reservados.
-  </p>
-
-</footer>
-
-<a class="whatsapp"
-   href="https://wa.me/16893090939?text=Hola%20quiero%20cotizar"
-   target="_blank">
-
-💬
-
-</a>
+</script>
 
 </body>
 </html>
