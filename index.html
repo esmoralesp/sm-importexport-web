@@ -291,15 +291,34 @@
 
     .gallery-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:15px;
+      grid-template-columns:repeat(auto-fit, minmax(360px, 1fr));
+      gap:25px;
+      margin-top:30px;
     }
 
-    .gallery-grid img{
+    .gallery-item{
+      background:#0b1728;
+      border:1px solid rgba(216,164,58,.25);
+      border-radius:18px;
+      overflow:hidden;
+      padding:12px;
+      box-shadow:0 10px 28px rgba(0,0,0,.35);
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+
+    .gallery-item:hover{
+      transform:translateY(-4px) scale(1.01);
+      box-shadow:0 16px 34px rgba(0,0,0,.45);
+    }
+
+    .gallery-item img,
+    .gallery-item video{
       width:100%;
-      height:230px;
-      object-fit:cover;
-      border-radius:6px;
+      height:420px;
+      object-fit:contain;
+      border-radius:12px;
+      display:block;
+      background:#050b14;
     }
 
     .contact{
@@ -363,6 +382,11 @@
       .steps,
       .brands-grid{
         grid-template-columns:1fr;
+      }
+
+      .gallery-item img,
+      .gallery-item video{
+        height:300px;
       }
 
     }
